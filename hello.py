@@ -1,14 +1,18 @@
-
-
 import os
 from flask import Flask
+from flask import request
+from flask import render_template
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return 'Hello World!'
+def my_form():
+    return render_template("my-form.html")
 
-@app.route('/varun')
-def greet_varun():
-    return 'Hello Varun ! Nice to see you here. Yay! :)'
+@app.route('/', methods=['POST'])
+def my_form_post():
+
+    text = request.form['text']
+    processed_text = text.upper()
+    return processed_text
+
