@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
-    <h1>Enter some text</h1>
-    <h2>(it will be converted to uppercase)</h2>
+<head>
+<title>JSON2HTML| HOME</title>
+<link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../static/main.css">
+</head>
+<body onload = "process()">
+	<span id="error">{{ error }}</span>
+	<div id="container">
+    <h1 class="topic">JSON 2 HTML</h1>
+    <h3 class="description">JSON Object will be converted to readable HTML format</h3>
     <form action="." method="POST">
-        <input type="text" name="text">
-        <input type="submit" name="my-form" value="Send">
+    	<legend id="legend">JSON Object</legend>
+        <textarea id="input" rows="15" placeholder='Example: {"Project":{"name" :"Json2Html","Type":"JSON Object"},"Function":"Conversion"}' name="text">{{ pro }}</textarea>
+        <br />
+        <div id="radioStyle">
+        <span >Raw Styling: </span> <input type="radio" class="myClass" value="2" checked name="users"/>
+        <span style="color:#2F96B4;">Styling using Bootstrap-Twitter: </span><input type="radio" class="myClass" value="1"  name="users"/></div>
+        <br />
+        <input type="submit" name="my-form" value="Send" id="sendButton" class="btn btn-success">
     </form>
+    
+    <div id="table">
+    {{ processed_text }}
+    </div>
+
+    <div id="outputTable"></div>
+    <br />
+    <legend id="legend2">Auto Generated HTML Table Code:</legend>
+    <textarea id="output" rows="15" placeholder="Will generate HTML Table Code"></textarea>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='convert.js') }}"></script>
+
 </body>
 </html>

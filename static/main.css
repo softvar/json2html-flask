@@ -1,0 +1,44 @@
+
+	.topic{
+		text-align: center;
+		text-decoration: underline;
+		color: #212121;
+	}
+	.description{
+		text-align: center;
+		color: #4DBC7F;
+	}
+	#container{
+		margin-left: 20px;
+	}
+	#input,#output{
+		width:80%;
+		margin-left: 8%;
+		padding: 10px;
+	}
+	#output{
+		background: #F3F3F3;
+	}
+	#legend,#legend2{
+		text-align:center;
+		font-weight: bold;
+	}
+	#legend2{
+		color:red;
+	}
+	#sendButton{
+		margin-left: 48%;
+	}
+	#outputTable{
+		margin-left: 8%;
+	}
+	#radioStyle{
+		margin-left: 40%;
+		color: #212121;
+	}
+	#error{
+		color: red;
+		font-size: 20px;
+		font-style: italic;
+		margin-left: 44%;
+	}
