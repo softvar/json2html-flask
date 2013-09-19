@@ -1,7 +1,19 @@
+'''
+JSON 2 HTML convertor
+=====================
 
-from flask import json
+(c) Varun Malhotra 2013
+Source Code: https://github.com/softvar/json2html
+------------
+
+LICENSE: MIT
+--------
+'''
+
 import ordereddict
 import HTMLParser
+
+from flask import json
 from flask import Flask
 from flask import request
 from flask import render_template
@@ -16,52 +28,34 @@ def my_form():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-
+    '''
+    receive submitted data and process
+    '''
     text = request.form['text']
     checkbox = request.form['users']
     style=""
-    print checkbox
     if(checkbox=="1"):
     	style="<table class=\"table table-condensed table-bordered table-hover\""
     else:
     	style="<table border=\"1\""
-    #text = {'a':'1','b':'2'}
-    jso = '''{
-    "glossary": {
-        "title": "example glossary",
-		"GlossDiv": {
-            "title": "S",
-			"GlossList": {
-                "GlossEntry": {
-                    "ID": "SGML",
-					"SortAs": "SGML",
-					"GlossTerm": "Standard Generalized Markup Language",
-					"Acronym": "SGML",
-					"Abbrev": "ISO 8879:1986",
-					"GlossDef": {
-                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
-						"GlossSeeAlso": ["GML", "XML"]
-                    },
-					"GlossSee": "markup"
-                }
-            }
-        }
-    }
-}'''
+    
     #json_input = json.dumps(text)
     try:
         ordered_json = json.loads(text, object_pairs_hook=ordereddict.OrderedDict)
-    	#print ordered_json
+    	print ordered_json
         processed_text = htmlConvertor(ordered_json,style)
-    	#rep(jso)
-        global a
-        a= ''
+
         html_parser = HTMLParser.HTMLParser()
         return render_template("my-form.html",	processed_text=html_parser.unescape(processed_text),pro = text)
     except:
-    	return render_template("my-form.html",error="Error Parsing JSON!")
+        return render_template("my-form.html",error="Error Parsing JSON!")
+
 
 def htmlConvertor(ordered_json,style):
+		'''
+		converts JSON Object into human readable HTML representation
+		generating HTML table code with raw/bootstrap styling.
+		'''
 		global a
 		a=a+ style + "<tr>"
 		for k,v in ordered_json.iteritems():
@@ -69,10 +63,18 @@ def htmlConvertor(ordered_json,style):
 			if(isinstance(v,list)):
 				a=a+ '<td><ul>'
 				for i in range(0,len(v)):
-					a=a+ '<li>'+str(v[i])+'</li>'
+					if(isinstance(v[i],unicode)):
+						a=a+ '<li>'+str(v[i])+'</li>'
+					elif(isinstance(v[i],int)):
+						a=a+ '<li>'+str(v[i])+'</li>'
+					elif(isinstance(v[i],list)==False):
+						htmlConvertor(v[i],style)
 				a=a+ '</ul></td>'
 				a=a+ '</tr>'
 			elif(isinstance(v,unicode)):
+				a=a+ '<td>'+ str(v) +'</td>'
+				a=a+ '</tr>'
+			elif(isinstance(v,int)):
 				a=a+ '<td>'+ str(v) +'</td>'
 				a=a+ '</tr>'
 			else:

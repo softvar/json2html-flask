@@ -17,7 +17,7 @@
 		padding: 10px;
 	}
 	#output{
-		background: #F3F3F3;
+		background: #FAFAFA;
 	}
 	#legend,#legend2{
 		text-align:center;
@@ -31,6 +31,7 @@
 	}
 	#outputTable{
 		margin-left: 8%;
+		width: 82%;
 	}
 	#radioStyle{
 		margin-left: 40%;
