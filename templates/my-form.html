@@ -7,9 +7,18 @@
 </head>
 <body onload = "process()">
 	<span id="error">{{ error }}</span>
+	<a href="https://github.com/softvar"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
 	<div id="container">
     <h1 class="topic">JSON 2 HTML</h1>
     <h3 class="description">JSON Object will be converted to readable HTML format</h3>
+    <div id="links">
+    	<ul>
+    	<a href="/about" id="tour">About this</a>
+    	<a href="http://softvar.github.io" id="tour" target="_blank">About Me</a>
+    	<a href="https://pypi.python.org/pypi/json2html/" id="tour" target="_blank">json2html Python package</a>
+    	</ul>
+    </div>
+    <br /><br />
     <form action="." method="POST">
     	<legend id="legend">JSON Object</legend>
         <textarea id="input" rows="15" placeholder='Example: {"Project":{"name" :"Json2Html","Type":"JSON Object"},"Function":"Conversion"}' name="text">{{ pro }}</textarea>

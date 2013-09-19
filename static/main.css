@@ -17,7 +17,7 @@
 		padding: 10px;
 	}
 	#output{
-		background: #FAFAFA;
+		background: #FCFCFC;
 	}
 	#legend,#legend2{
 		text-align:center;
@@ -42,4 +42,17 @@
 		font-size: 20px;
 		font-style: italic;
 		margin-left: 44%;
+	}
+	input[type=button]{
+		margin-left: 10%;
+		margin-top: 1%;
+	}
+	#links{
+		margin-left: 20%;
+		margin-top: 1%;
+	}
+	#tour{
+		font-size: 18px;
+		float: left;
+		margin-left: 10%;
 	}

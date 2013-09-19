@@ -26,6 +26,10 @@ a = ''
 def my_form():
     return render_template("my-form.html")
 
+@app.route('/about')
+def aboutMe():
+    return render_template("about.html")
+
 @app.route('/', methods=['POST'])
 def my_form_post():
     '''
