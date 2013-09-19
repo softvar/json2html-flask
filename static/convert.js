@@ -9,7 +9,9 @@ processed_data = document.getElementById('table').innerHTML;
     	if(processed_data){
     		convertHtmlToText();
     	}
-    	function convertHtmlToText() {
+
+function convertHtmlToText() {
+
     var inputText = document.getElementById("table").innerHTML;
     var returnText = "" + inputText;
 
@@ -45,4 +47,5 @@ processed_data = document.getElementById('table').innerHTML;
     document.getElementById("outputTable").innerHTML = returnText;
     if(returnText!=null)
     document.getElementById("output").value = returnText;
-    }
+    
+}

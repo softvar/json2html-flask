@@ -35,17 +35,18 @@ def my_form_post():
     checkbox = request.form['users']
     style=""
     if(checkbox=="1"):
-    	style="<table class=\"table table-condensed table-bordered table-hover\""
+    	style="<table class=\"table table-condensed table-bordered table-hover\">"
     else:
-    	style="<table border=\"1\""
+    	style="<table border=\"1\">"
     
     #json_input = json.dumps(text)
     try:
         ordered_json = json.loads(text, object_pairs_hook=ordereddict.OrderedDict)
-    	print ordered_json
         processed_text = htmlConvertor(ordered_json,style)
 
         html_parser = HTMLParser.HTMLParser()
+        global a
+        a = ''
         return render_template("my-form.html",	processed_text=html_parser.unescape(processed_text),pro = text)
     except:
         return render_template("my-form.html",error="Error Parsing JSON!")
@@ -57,8 +58,9 @@ def htmlConvertor(ordered_json,style):
 		generating HTML table code with raw/bootstrap styling.
 		'''
 		global a
-		a=a+ style + "<tr>"
+		a=a+ style 
 		for k,v in ordered_json.iteritems():
+			a=a+ '<tr>'
 			a=a+ '<th>'+ str(k) +'</th>'
 			if(isinstance(v,list)):
 				a=a+ '<td><ul>'
@@ -79,10 +81,11 @@ def htmlConvertor(ordered_json,style):
 				a=a+ '</tr>'
 			else:
 				a=a+ '<td>'
-				a=a+ '<table border="1">'
+				#a=a+ '<table border="1">'
 				htmlConvertor(v,style)
-				a=a+ '</table></td>'
-		a=a+ '</tr></table>'
+				a=a+ '</td></tr>'
+				#a=a+ '</table></td>'
+		a=a+ '</table>'
 		return a
 
 if __name__ == '__main__':
