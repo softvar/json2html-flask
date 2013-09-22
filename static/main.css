@@ -24,7 +24,8 @@
 		font-weight: bold;
 	}
 	#legend2{
-		color:red;
+		color:#2F96B4;
+		font-size: 26px;
 	}
 	#sendButton{
 		margin-left: 48%;
@@ -34,8 +35,10 @@
 		width: 82%;
 	}
 	#radioStyle{
-		margin-left: 40%;
-		color: #212121;
+		margin-left: 42%;
+		font-weight: bold;
+		color: red;
+
 	}
 	#error{
 		color: red;

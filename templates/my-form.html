@@ -24,8 +24,8 @@
         <textarea id="input" rows="15" placeholder='Example: {"Project":{"name" :"Json2Html","Type":"JSON Object"},"Function":"Conversion"}' name="text">{{ pro }}</textarea>
         <br />
         <div id="radioStyle">
-        <span >Raw Styling: </span> <input type="radio" class="myClass" value="2" checked name="users"/>
-        <span style="color:#2F96B4;">Styling using Bootstrap-Twitter: </span><input type="radio" class="myClass" value="1"  name="users"/></div>
+        <span style="margin-left:8%;">Raw Styling: </span> <input type="radio" class="myClass" value="2" checked name="users"/><br />
+        <span >Styling using Bootstrap-Twitter: </span><input type="radio" class="myClass" value="1"  name="users"/></div>
         <br />
         <input type="submit" name="my-form" value="Send" id="sendButton" class="btn btn-success">
     </form>
@@ -40,7 +40,9 @@
     <textarea id="output" rows="15" placeholder="Will generate HTML Table Code"></textarea>
     </div>
 
+
     <script type="text/javascript" src="{{ url_for('static', filename='convert.js') }}"></script>
+    
 
 </body>
 </html>
