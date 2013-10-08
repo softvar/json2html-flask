@@ -67,7 +67,7 @@ def iterJson(ordered_json,style):
 			for i in range(0,len(v)):
 				if(isinstance(v[i],unicode)):
 					a=a+ '<li>'+str(v[i])+'</li>'
-				elif(isinstance(v[i],int)):
+				elif(isinstance(v[i],int) or isinstance(v,float)):
 					a=a+ '<li>'+str(v[i])+'</li>'
 				elif(isinstance(v[i],list)==False):
 					iterJson(v[i],style)
@@ -101,7 +101,7 @@ def htmlConvertor(ordered_json,style):
 		for i in range(0,len(ordered_json)):
 			if(isinstance(ordered_json[i],unicode)):
 				a=a+ '<li>'+str(ordered_json[i])+'</li>'
-			elif(isinstance(ordered_json[i],int)):
+			elif(isinstance(ordered_json[i],int) or isinstance(ordered_json[i],float)):
 				a=a+ '<li>'+str(ordered_json[i])+'</li>'
 			elif(isinstance(ordered_json[i],list)==False):
 				htmlConvertor(ordered_json[i],style)
