@@ -3,7 +3,7 @@ JSON 2 HTML convertor
 =====================
 
 (c) Varun Malhotra 2013
-Source Code: https://github.com/softvar/json2html
+Source Code: https://github.com/softvar/json2html-flask
 ------------
 
 LICENSE: MIT
