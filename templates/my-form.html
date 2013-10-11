@@ -4,23 +4,24 @@
 <title>JSON2HTML| HOME</title>
 <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../static/main.css">
+<link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css" />
 </head>
 <body onload = "process()">
 	<span id="error">{{ error }}</span>
-	<a href="https://github.com/softvar"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
+	<a href="https://github.com/softvar"><img style="position: fixed; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
 	<div id="container">
     <h1 class="topic">JSON 2 HTML</h1>
-    <h3 class="description">JSON Object will be converted to readable HTML format</h3>
+    <h3 class="description">JSON Object will be converted to human readable HTML representation</h3>
     <div id="links">
     	<ul>
-    	<a href="/about" id="tour">About this</a>
+    	<a href="/about" id="tour">About this project</a>
     	<a href="http://softvar.github.io" id="tour" target="_blank">About Me</a>
     	<a href="https://pypi.python.org/pypi/json2html/" id="tour" target="_blank">json2html Python package</a>
     	</ul>
     </div>
     <br /><br />
     <form action="." method="POST">
-    	<legend id="legend">JSON Object</legend>
+    	<legend id="legend">Input JSON Object</legend>
         <textarea id="input" rows="15" placeholder='Example: {"Project":{"name" :"Json2Html","Type":"JSON Object"},"Function":"Conversion"}' name="text">{{ pro }}</textarea>
         <br />
         <div id="radioStyle">
@@ -40,7 +41,23 @@
     <textarea id="output" rows="15" placeholder="Will generate HTML Table Code"></textarea>
     </div>
 
+    <footer>
+      
+      <div id="social-media-cons">
+            <a href="http://www.linkedin.com/pub/varun-malhotra/71/a14/131" target="_blank"><i class="icon-linkedin icon-2x " title="LinkedIn" ></i></a>
 
+            <a href="http://twitter.com/s0ftvar" target="_blank" ><i class="icon-twitter icon-2x " title="Twitter" ></i></a>
+
+            <a href="http://stackoverflow.com/users/2494535/varun-malhotra" target="_blank"><i class="icon-stackexchange icon-2x " title= "Stackoverflow"></i></a>
+            
+            <a href="http://github.com/softvar" target="_blank"><i class="icon-github icon-2x " title="Github"></i></a>
+
+      </div>
+      <br />
+      <span id="footer_text">Built with</span> <i class="icon-heart" style="color:red"></i>
+      
+      
+  </footer>
     <script type="text/javascript" src="{{ url_for('static', filename='convert.js') }}"></script>
     
 

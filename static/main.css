@@ -59,3 +59,78 @@
 		float: left;
 		margin-left: 10%;
 	}
+
+	#details {
+		font-size: 21px;
+		line-height: 28px;
+		font-family: 'Lato', sans-serif;
+	}
+
+	#social-media-cons {
+  		margin-top: 10px;
+ 	}
+	#social-media-cons a{
+		text-decoration: none;
+ 	}
+
+ 	footer
+ 	{
+ 		position: absolute;
+    font-size: 22px;
+    font-weight:500;
+    text-align: center;
+    height: 12%;
+    background: #fff;
+    width: 98%;
+    margin: 0 auto;
+
+    background: black;
+    
+    padding: 12px;
+    color: #636363;
+    line-height: 12px;
+}
+
+#footer_text{
+
+  font-size: 27px;
+  color: #37B78C;
+}
+
+
+a .icon-stackexchange, .icon-github, .icon-linkedin, .icon-twitter {
+text-decoration: none;
+}
+.icon-stackexchange, .icon-github, .icon-linkedin, .icon-twitter {
+color: #C0C0C0; 
+margin-left: 15px;
+transition: all 0.5s ease 0.2s;
+text-decoration: none;
+}
+
+.icon-linkedin:hover {
+  color: #65B7D2;
+  text-decoration: none;
+}
+.icon-twitter:hover {
+color: #45B0E3;
+text-decoration: none;
+}
+
+.icon-stackexchange:hover {
+color: #FF8A1B;
+text-decoration: none;
+}
+
+.icon-github:hover {
+color: #333333;
+text-decoration: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
