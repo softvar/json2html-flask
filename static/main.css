@@ -8,12 +8,11 @@
 		text-align: center;
 		color: #4DBC7F;
 	}
-	#container{
-		margin-left: 20px;
+	.container{
+		width:80%;
 	}
 	#input,#output{
-		width:80%;
-		margin-left: 8%;
+		width:100%;
 		padding: 10px;
 	}
 	#output{
@@ -79,11 +78,10 @@
     font-size: 22px;
     font-weight:500;
     text-align: center;
-    height: 12%;
+    height: 100px;
     background: #fff;
-    width: 98%;
+   width: 80%;
     margin: 0 auto;
-
     background: black;
     
     padding: 12px;
