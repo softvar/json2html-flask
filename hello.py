@@ -52,7 +52,7 @@ def my_form_post():
         html_parser = HTMLParser.HTMLParser()
         global a
         a = ''
-        return render_template("my-form.html",	processed_text=html_parser.unescape(processed_text),pro = text)
+        return render_template("my-form.html#outputTable",	processed_text=html_parser.unescape(processed_text),pro = text)
     except:
         return render_template("my-form.html",error="Error Parsing JSON!")
 
