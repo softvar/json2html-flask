@@ -29,6 +29,10 @@
 	#sendButton{
 		margin-left: 48%;
 	}
+	#table {
+		display: none;
+	}
+
 	#outputTable{
 		margin-left: 8%;
 		width: 82%;

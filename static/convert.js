@@ -2,7 +2,6 @@
 
 function process() {
         document.getElementById('table').style.display = "none";
-        
     }
 
 processed_data = document.getElementById('table').innerHTML;
@@ -45,6 +44,8 @@ function convertHtmlToText() {
 
     //-- return
     document.getElementById("outputTable").innerHTML = returnText;
+    if(document.getElementById('outputTable').innerHTML!="")
+        window.location.hash = "sendButton";
     if(returnText!=null)
     document.getElementById("output").value = returnText;
     
