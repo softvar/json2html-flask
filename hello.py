@@ -9,6 +9,7 @@ Source Code: https://github.com/softvar/json2html-flask
 LICENSE: MIT
 --------
 '''
+# -*- coding: utf-8 -*- 
 
 import ordereddict
 import HTMLParser
@@ -52,7 +53,7 @@ def my_form_post():
         html_parser = HTMLParser.HTMLParser()
         global a
         a = ''
-        return render_template("my-form.html#outputTable",	processed_text=html_parser.unescape(processed_text),pro = text)
+        return render_template("my-form.html", processed_text=html_parser.unescape(processed_text),pro = text)
     except:
         return render_template("my-form.html",error="Error Parsing JSON!")
 
@@ -62,11 +63,12 @@ def iterJson(ordered_json,style):
 	for k,v in ordered_json.iteritems():
 		a=a+ '<tr>'
 		a=a+ '<th>'+ str(k) +'</th>'
+
 		if(isinstance(v,list)):
 			a=a+ '<td><ul>'
 			for i in range(0,len(v)):
 				if(isinstance(v[i],unicode)):
-					a=a+ '<li>'+str(v[i])+'</li>'
+					a=a+ '<li>'+unicode(v[i])+'</li>'
 				elif(isinstance(v[i],int) or isinstance(v,float)):
 					a=a+ '<li>'+str(v[i])+'</li>'
 				elif(isinstance(v[i],list)==False):
@@ -74,7 +76,7 @@ def iterJson(ordered_json,style):
 			a=a+ '</ul></td>'
 			a=a+ '</tr>'
 		elif(isinstance(v,unicode)):
-			a=a+ '<td>'+ str(v) +'</td>'
+			a=a+ '<td>'+ unicode(v) +'</td>'
 			a=a+ '</tr>'
 		elif(isinstance(v,int) or isinstance(v,float)):
 			a=a+ '<td>'+ str(v) +'</td>'
@@ -100,7 +102,7 @@ def htmlConvertor(ordered_json,style):
 	except:
 		for i in range(0,len(ordered_json)):
 			if(isinstance(ordered_json[i],unicode)):
-				a=a+ '<li>'+str(ordered_json[i])+'</li>'
+				a=a+ '<li>'+unicode(ordered_json[i])+'</li>'
 			elif(isinstance(ordered_json[i],int) or isinstance(ordered_json[i],float)):
 				a=a+ '<li>'+str(ordered_json[i])+'</li>'
 			elif(isinstance(ordered_json[i],list)==False):
