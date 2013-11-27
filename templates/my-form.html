@@ -7,21 +7,52 @@
 <link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css" />
 </head>
 <body onload = "process()">
-	<span id="error">{{ error }}</span>
-	<a href="https://github.com/softvar"><img style="position: fixed; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
-	<div class="container">
-    <h1 class="topic">JSON 2 HTML</h1>
-    <h3 class="description">JSON Object will be converted to human readable HTML representation</h3>
+	
+	<a href="https://github.com/softvar/json2html-flask"><img style="position: fixed; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
+	<div class="container" style="width:70%;margin: 0 auto;">
+    <h1 class="topic"><a href="#">JSON 2 HTML</a></h1>
+    <h3 class="description">JSON Object will be converted to human readable HTML format</h3>
+    <ul>
+    <li>
+
+    <a href="https://twitter.com/s0ftvar" class="twitter-follow-button" data-show-count="true">Follow @s0ftvar</a>
+    
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    
+    </li>
+    <li>
+    
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="s0ftvar">Tweet</a>
+    
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    
+    </li>
+    <li>
+ 
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=softvar&repo=json2html-flask&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+    
+    </li>
+    <li>
+    
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=softvar&repo=json2html-flask&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+    
+    </li>
+    </ul>
+    <br/><br />
+    <legend></legend>
     <div id="links">
     	<ul>
-    	<a href="/about" id="tour">About this project</a>
-    	<a href="http://softvar.github.io" id="tour" target="_blank">About Me</a>
+    	<a href="/about" id="tour">About this APP</a>
+    	<a href="http://softvar.github.io" id="tour" target="_blank">WhoAmI</a>
     	<a href="https://pypi.python.org/pypi/json2html/" id="tour" target="_blank">json2html Python package</a>
     	</ul>
     </div>
-    <br /><br />
+    <br />
+
+    <legend></legend>
     <form action="." method="POST">
-    	<legend id="legend">Input JSON Object</legend>
+    	<p id="legend2">Input JSON Object</p>
+        <span id="json-error">{{ error }}</span>
         <textarea id="input" rows="15" placeholder='Example: {"Project":{"name" :"Json2Html","Type":"JSON Object"},"Function":"Conversion"}' name="text">{{ pro }}</textarea>
         <br />
         <div id="radioStyle">
@@ -36,7 +67,7 @@
     <div id="outputTable"></div>
     <br />
     <legend id="legend2">Auto Generated HTML Table Code:</legend>
-    <textarea id="output" rows="15" placeholder="Will generate HTML Table Code"></textarea>
+    <textarea id="output" rows="15" placeholder="Will generate HTML Table Code" readonly></textarea>
         <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

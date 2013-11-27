@@ -1,12 +1,13 @@
 
 	.topic{
 		text-align: center;
-		text-decoration: underline;
 		color: #212121;
+
 	}
 	.description{
 		text-align: center;
 		color: #4DBC7F;
+		margin-top: 3%;
 	}
 	.container{
 		width:80%;
@@ -23,7 +24,6 @@
 		font-weight: bold;
 	}
 	#legend2{
-		color:#2F96B4;
 		font-size: 26px;
 	}
 	#sendButton{
@@ -43,30 +43,31 @@
 		color: red;
 
 	}
-	#error{
+	#json-error{
 		color: red;
-		font-size: 20px;
+		font-size: 24px;
 		font-style: italic;
-		margin-left: 44%;
+		margin-left: 18%;
+		font-weight: bold;
 	}
 	input[type=button]{
 		margin-left: 10%;
 		margin-top: 1%;
 	}
 	#links{
-		margin-left: 20%;
-		margin-top: 1%;
 	}
 	#tour{
 		font-size: 18px;
 		float: left;
-		margin-left: 10%;
+		margin-left: 8%;
 	}
 
 	#details {
 		font-size: 21px;
 		line-height: 28px;
 		font-family: 'Lato', sans-serif;
+		text-align:justify;
+		text-justify:inter-word;
 	}
 
 	#social-media-cons {
@@ -80,13 +81,11 @@
  	{
  		position: absolute;
     font-size: 22px;
-    font-weight:500;
     text-align: center;
     height: 100px;
     background: #fff;
-   width: 80%;
+   width: 70%;
     margin: 0 auto;
-    background: black;
     
     padding: 12px;
     color: #636363;
@@ -97,6 +96,15 @@
 
   font-size: 27px;
   color: #37B78C;
+}
+
+ul {
+	text-align: center;
+	margin-left: 19%;
+}
+li {
+	float: left;
+	list-style: none;
 }
 
 
@@ -135,4 +143,36 @@ text-decoration: none;
 
 ::-moz-focus-inner {
     border: 0;
+}
+
+
+@media (min-width: 1200px) { 
+	#tour {
+		font-size: 18px;
+	}
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	#tour {
+		font-size: 16px;
+	}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	#tour {
+		font-size: 11px;
+		margin-left:0px;
+		padding: 5px;
+}
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	#tour {
+		font-size: 9px;
+		margin-left:0px;
+		padding: 5px;
+}
 }
