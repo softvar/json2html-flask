@@ -47,7 +47,7 @@ def my_form_post():
     #json_input = json.dumps(text)
     try:
         ordered_json = json.loads(text, object_pairs_hook=ordereddict.OrderedDict)
-        #print ordered_json
+        print ordered_json
         processed_text = htmlConvertor(ordered_json,style)
 
         html_parser = HTMLParser.HTMLParser()
@@ -55,15 +55,16 @@ def my_form_post():
         a = ''
         return render_template("my-form.html", processed_text=html_parser.unescape(processed_text),pro = text)
     except:
-        return render_template("my-form.html",error="Error Parsing JSON!")
+        return render_template("my-form.html",error="Error Parsing JSON!",pro=text)
 
 def iterJson(ordered_json,style):
 	global a
-	a=a+ style 
+	a=a+ style
 	for k,v in ordered_json.iteritems():
 		a=a+ '<tr>'
 		a=a+ '<th>'+ str(k) +'</th>'
-
+		if (v==None):
+			v = unicode("")
 		if(isinstance(v,list)):
 			a=a+ '<td><ul>'
 			for i in range(0,len(v)):
@@ -87,7 +88,6 @@ def iterJson(ordered_json,style):
 			iterJson(v,style)
 			a=a+ '</td></tr>'
 	a=a+ '</table>'
-
 def htmlConvertor(ordered_json,style):
 	'''
 	converts JSON Object into human readable HTML representation
