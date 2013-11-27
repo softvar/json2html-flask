@@ -55,7 +55,7 @@ def my_form_post():
         a = ''
         return render_template("my-form.html", processed_text=html_parser.unescape(processed_text),pro = text)
     except:
-        return render_template("my-form.html",error="Error Parsing JSON!",pro=text)
+        return render_template("my-form.html",error="Error Parsing JSON ! Please check your JSON syntax",pro=text)
 
 def iterJson(ordered_json,style):
 	global a
