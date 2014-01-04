@@ -12,7 +12,7 @@ Install json2html Python Package
 --------------------------------
 
 ```Shell
-pip install code
+pip install json2html
 ```
 
 [Package Link](https://github.com/softvar/json2html)
