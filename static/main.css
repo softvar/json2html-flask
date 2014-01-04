@@ -1,12 +1,12 @@
 
-	.topic{
+	.topic, .topic a{
 		text-align: center;
-		color: #212121;
+		color: #346BBA;
 
 	}
 	.description{
 		text-align: center;
-		color: #4DBC7F;
+		color: #777;
 		margin-top: 3%;
 	}
 	.container{
@@ -25,6 +25,7 @@
 	}
 	#legend2{
 		font-size: 26px;
+		color: #4DBC7F;
 	}
 	#sendButton{
 		margin-left: 48%;
@@ -107,6 +108,14 @@ li {
 	list-style: none;
 }
 
+a, a:active a:hover, a:focus{
+	outline: 0;
+}
+
+#links a{
+	color: #346BBA;
+	font-size: 22px;
+}
 
 a .icon-stackexchange, .icon-github, .icon-linkedin, .icon-twitter {
 text-decoration: none;
