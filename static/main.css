@@ -99,11 +99,11 @@
   color: #37B78C;
 }
 
-ul {
+.socio ul {
 	text-align: center;
 	margin-left: 19%;
 }
-li {
+.socio li {
 	float: left;
 	list-style: none;
 }
