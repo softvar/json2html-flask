@@ -1,149 +1,141 @@
-
-	.topic, .topic a{
-		text-align: center;
-		color: #346BBA;
-
-	}
-	.description{
-		text-align: center;
-		color: #777;
-		margin-top: 3%;
-	}
-	.container{
-		width:80%;
-	}
-	#input,#output{
-		width:100%;
-		padding: 10px;
-	}
-	#output{
-		background: #FCFCFC;
-	}
-	#legend,#legend2{
-		text-align:center;
-		font-weight: bold;
-	}
-	#legend2{
-		font-size: 26px;
-		color: #4DBC7F;
-	}
-	#sendButton{
-		margin-left: 48%;
-	}
-	#table {
-		display: none;
-	}
-
-	#outputTable{
-		margin-left: 8%;
-		width: 82%;
-	}
-	#radioStyle{
-		margin-left: 42%;
-		font-weight: bold;
-		color: red;
-
-	}
-	#json-error{
-		color: red;
-		font-size: 24px;
-		font-style: italic;
-		margin-left: 18%;
-		font-weight: bold;
-	}
-	input[type=button]{
-		margin-left: 10%;
-		margin-top: 1%;
-	}
-	#links{
-	}
-	#tour{
-		font-size: 18px;
-		float: left;
-		margin-left: 8%;
-	}
-
-	#details {
-		font-size: 21px;
-		line-height: 28px;
-		font-family: 'Lato', sans-serif;
-		text-align:justify;
-		text-justify:inter-word;
-	}
-
-	#social-media-cons {
-  		margin-top: 10px;
- 	}
-	#social-media-cons a{
-		text-decoration: none;
- 	}
-
- 	footer
- 	{
- 		position: absolute;
-    font-size: 22px;
-    text-align: center;
-    height: 100px;
-    background: #fff;
-   width: 70%;
-    margin: 0 auto;
-    
-    padding: 12px;
-    color: #636363;
-    line-height: 12px;
+.container {
+	width: 99%;
 }
 
-#footer_text{
-
-  font-size: 27px;
-  color: #37B78C;
-}
-
-.socio ul {
+.topic, .topic a{
 	text-align: center;
-	margin-left: 19%;
+	background-color: #4db6ac;
+	color: #fff;
 }
-.socio li {
+
+.description{
+	text-align: center;
+	color: #777;
+	margin-top: 30px;
+}
+
+#input,#output{
+	width: 100%;
+	padding: 10px;
+}
+
+#output{
+	background: #FCFCFC;
+}
+
+#legend,#legend2{
+	text-align:center;
+	font-weight: bold;
+}
+
+#legend2{
+	font-size: 26px;
+	color: #4db6ac;
+}
+
+#sendButton{
+	margin-left: 48%;
+}
+
+#table {
+	display: none;
+}
+
+#outputTable{
+	margin-left: 8%;
+	width: 82%;
+}
+
+#radio-btn {
+	text-align: center;
+	font-weight: bold;
+	color: #777;
+}
+
+#json-error{
+	color: red;
+	font-size: 24px;
+	font-style: italic;
+	margin-left: 18%;
+	font-weight: bold;
+}
+
+input[type=button]{
+	margin-left: 10%;
+	margin-top: 1%;
+}
+
+#tour {
+	font-size: 18px;
 	float: left;
-	list-style: none;
+	margin-left: 8%;
+}
+
+#details {
+	color: #666;
+	font-size: 18px;
+	line-height: 28px;
+	font-family: 'Lato', sans-serif;
+	text-align:justify;
+}
+
+#social-media-cons {
+	margin-top: 10px;
+}
+
+#social-media-cons a {
+	text-decoration: none;
+}
+
+footer {
+	position: absolute;
+	font-size: 22px;
+	text-align: center;
+	height: 100px;
+	background: #fff;
+	width: 100%;
+	margin: 0 auto;
+	padding: 12px;
+	color: #636363;
+	line-height: 12px;
+}
+
+#footer_text {
+	font-size: 27px;
+	color: #37B78C;
 }
 
 a, a:active a:hover, a:focus{
 	outline: 0;
 }
 
-#links a{
-	color: #346BBA;
-	font-size: 22px;
-}
-
 a .icon-stackexchange, .icon-github, .icon-linkedin, .icon-twitter {
-text-decoration: none;
+	text-decoration: none;
 }
 .icon-stackexchange, .icon-github, .icon-linkedin, .icon-twitter {
-color: #C0C0C0; 
-margin-left: 15px;
-transition: all 0.5s ease 0.2s;
-text-decoration: none;
+	color: #C0C0C0;
+	margin-left: 15px;
+	transition: all 0.5s ease 0.2s;
+	text-decoration: none;
 }
 
 .icon-linkedin:hover {
-  color: #65B7D2;
-  text-decoration: none;
+	color: #65B7D2;
+	text-decoration: none;
 }
 .icon-twitter:hover {
-color: #45B0E3;
-text-decoration: none;
+	color: #45B0E3;
+	text-decoration: none;
 }
 
 .icon-stackexchange:hover {
-color: #FF8A1B;
-text-decoration: none;
+	color: #FF8A1B;
+	text-decoration: none;
 }
 
 .icon-github:hover {
-color: #333333;
-text-decoration: none;
+	color: #333333;
+	text-decoration: none;
 }
 
 :focus {
@@ -155,33 +147,47 @@ text-decoration: none;
 }
 
 
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
 	#tour {
 		font-size: 18px;
 	}
 }
- 
+
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
 	#tour {
 		font-size: 16px;
 	}
 }
- 
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 	#tour {
 		font-size: 11px;
 		margin-left:0px;
 		padding: 5px;
+	}
 }
-}
- 
+
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	#tour {
 		font-size: 9px;
 		margin-left:0px;
 		padding: 5px;
+	}
 }
+
+.github-corner:hover .octo-arm {
+	animation: octocat-wave 1000ms ease-in-out infinite;
+}
+
+@keyframes octocat-wave {
+	0%, 100% {
+		transform:rotate(0);
+	} 20%, 60% {
+		transform:rotate(-25deg);
+	} 40%, 80% {
+		transform:rotate(10deg);
+	}
 }

@@ -11,7 +11,7 @@ Source Code: https://github.com/softvar/json2html-flask
 LICENSE: MIT
 --------
 '''
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 
 import ordereddict
 import HTMLParser
@@ -23,15 +23,11 @@ from flask import render_template
 
 app = Flask(__name__)
 
-a = ''	
+a = ''
 
 @app.route('/')
 def my_form():
-    return render_template("my-form.html")
-
-@app.route('/about')
-def aboutMe():
-    return render_template("about.html")
+    return render_template("index.html")
 
 @app.route('/', methods=['POST'])
 def my_form_post():
@@ -45,7 +41,7 @@ def my_form_post():
     	style="<table class=\"table table-condensed table-bordered table-hover\">"
     else:
     	style="<table border=\"1\">"
-    
+
     #json_input = json.dumps(text)
     try:
         ordered_json = json.loads(text, object_pairs_hook=ordereddict.OrderedDict)
@@ -55,9 +51,9 @@ def my_form_post():
         html_parser = HTMLParser.HTMLParser()
         global a
         a = ''
-        return render_template("my-form.html", processed_text=html_parser.unescape(processed_text),pro = text)
+        return render_template("index.html", processed_text=html_parser.unescape(processed_text),pro = text)
     except:
-        return render_template("my-form.html",error="Error Parsing JSON ! Please check your JSON syntax",pro=text)
+        return render_template("index.html",error="Error Parsing JSON ! Please check your JSON syntax",pro=text)
 
 def iterJson(ordered_json,style):
 	global a
@@ -100,7 +96,7 @@ def htmlConvertor(ordered_json,style):
 		for k,v in ordered_json.iteritems():
 			pass
 		iterJson(ordered_json,style)
-		
+
 	except:
 		for i in range(0,len(ordered_json)):
 			if(isinstance(ordered_json[i],unicode)):
