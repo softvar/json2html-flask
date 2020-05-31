@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <title>JSON2HTML| HOME</title>
-<link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
-<link rel="stylesheet" href="../static/font-awesome/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="../static/main.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.min.css') }}" >
+<link rel="stylesheet" href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" >
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}" >
 </head>
 <body onload="process()">
     <a href="https://github.com/softvar/json2html-flask" class="github-corner" target="_blank" title="Star me on Github">
